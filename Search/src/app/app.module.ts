@@ -5,16 +5,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ProfileService } from './profile.service';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
-    ProfileComponent,
+    ProfileComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     ProfileService],
