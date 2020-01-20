@@ -6,10 +6,10 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ProfileService {
  
-  private username:string;
-  private clientid:'9a47957648e04b1ef56d';
-  private clientsecret:'9ec1f2fbaa6b928a5315b02ea9365ed9bebe3a1b';
-  updateProfile: any;
+  public username:string;
+  public clientid:'1a653274923672c235ab';
+  public clientsecret:'f771b691fc4ac6a9afc728a51042731d9c23edc3';
+  
 
   constructor(private http:HttpClient) { 
   console.log("service is now ready");
@@ -18,9 +18,12 @@ export class ProfileService {
 }
 
 getProfileInfo(){
-  return this.http.get("https://api.github.com/users/" +this.username +"?client_id" +this.username + "&client_secret=" +this.clientsecret);
+  return this.http.get("https://api.github.com/users/" + this.username +"?client_id" + this.username + "&client_secret=" + this.clientsecret);
 }
 getProfileRepos(){
-  return this.http.get("https://api.github.com/users/" +this.username +"/repos?client_id" +this.username + "&client_secret=" +this.clientsecret);
+  return this.http.get("https://api.github.com/users/" + this.username +"/repos?client_id" + this.username + "&client_secret=" + this.clientsecret);
+}
+updateProfile(username:string){
+  this.username=username;
 }
  }
