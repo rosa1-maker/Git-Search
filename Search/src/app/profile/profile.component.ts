@@ -12,7 +12,7 @@ export class ProfileComponent implements OnInit {
   constructor(private profileService: ProfileService) {
     this.profileService.getProfileInfo().subscribe(profile =>{
       console.log(profile);
-      this.profile = profile;
+      this.profile= this.profile
     }) 
    }
 

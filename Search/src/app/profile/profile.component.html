@@ -6,7 +6,29 @@
     <div class="panel-body">
         <div class="row">
             <div class ="col-3">
-                <img src="{{profile.avatar_url}}" alt="">
+                <img src="{{profile.avatar_url}}" alt="image profile">
+            </div>
+            <div class="col-5"><div class="panel-body">
+              <div class="row">
+                  <div class ="col-3">
+                      <img src="{{profile.avatar_url}}" alt="image profile">
+                  </div>
+                  <div class="col-5">
+                    <ul class="list">
+                      <li class="item"*ngIf="profile.bio">{{profile.bio}}</li>                <li class="item"*ngIf="profile.bio">{{profile.bio}}</li>
+                      <li class="item"*ngIf="profile.bio">{{profile.bio}}</li>
+                      <li class="item"*ngIf="profile.bio">{{profile.bio}}</li>
+      
+                    </ul>
+                  </div>
+              </div>
+          </div>
+              <ul class="list">
+                <li class="item"*ngIf="profile.bio">{{profile.bio}}</li>                <li class="item"*ngIf="profile.bio">{{profile.bio}}</li>
+                <li class="item"*ngIf="profile.bio">{{profile.bio}}</li>
+                <li class="item"*ngIf="profile.bio">{{profile.bio}}</li>
+
+              </ul>
             </div>
         </div>
     </div>
