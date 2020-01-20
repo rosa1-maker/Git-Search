@@ -10,14 +10,14 @@ import { HttpModule } from '@angular/http';
   declarations: [
     AppComponent,
     ProfileComponent,
-    HttpModule
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ProfileService
+    HttpModule
   ],
-  providers: [],
+  providers: [
+    ProfileService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
