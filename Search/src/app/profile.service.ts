@@ -13,5 +13,11 @@ export class ProfileService {
   constructor(private http:Http) { 
   console.log("service is now ready");
   this.username ='rosa1-maker'  ;
+
+}
+
+getProfileInfo(){
+  return this.http.get("http://api.github.com/users/" .this.username="?client_id" +this.username + "&client_secret=" +this.clientsecret)
+  .map(res => res.json());
 }
   }
