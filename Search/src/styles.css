@@ -1,4 +1,4 @@
-/* @import "~bootstrap/dist/css/bootstrap.css" */
+@import "~bootstrap/dist/css/bootstrap.css";
 
 
 #span{
@@ -6,7 +6,7 @@
     color:darkcyan;
 }
 body{
-    background-color: rgb(159, 158, 248);
+    background-image:url("https://i2.wp.com/i2.wp.com/wp.laravel-news.com/wp-content/uploads/2018/06/github-tips-and-tricks.png?fit=2200%2C1125&ssl=1");
     font-family: 'Oswald', serif;
 }
 h1{
