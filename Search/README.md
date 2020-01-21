@@ -5,7 +5,7 @@ This project was generated with the aim of creating a site where people can find
 ## links
 <ul>
 <li>To view my codes click(https://github.com/rosa1-maker/-Git-search-project-)</li>
-<li>To view my site click()</li>
+<li>To view my site click(https://rosa1-maker.github.io/Git-Search/)</li>
 </ul>
 
 ## Behaviour Driven Development
@@ -16,9 +16,6 @@ After searching the Github account you get to see the github profile and the you
 At the landing page you will be able to see the number of followers you have and the people you are following.
 
 </p>
-
-## Known Bugs
-<p>1.The rate of api limit </p>
 
 ## Technologies used
 <ul>
