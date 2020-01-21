@@ -1,4 +1,7 @@
-span{
+/* @import "~bootstrap/dist/css/bootstrap.css" */
+
+
+#span{
     font-size: 30px;
     color:darkcyan;
 }
@@ -14,4 +17,4 @@ h1{
 #and{
     font-size: 25px;
 }
-@import "~bootstrap/dist/css/bootstrap.css"
+

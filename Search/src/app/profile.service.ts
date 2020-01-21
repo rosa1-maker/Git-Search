@@ -5,6 +5,9 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ProfileService {
+  getProfileRepositories() {
+    throw new Error("Method not implemented.");
+  }
  
   public username:string;
   public clientid:'1a653274923672c235ab';

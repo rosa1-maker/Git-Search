@@ -7,31 +7,28 @@ import { ProfileService } from "../profile.service";
   styleUrls: ["./profile.component.css"]
 })
 export class ProfileComponent implements OnInit {
-  public profile: any;
-  public repos: any;
+  public prof: any;
+  public repositories: any;
   public username: string;
 
   constructor(public profileService: ProfileService) {
-    this.profileService.getProfileInfo().subscribe(profile => {
-      console.log(profile);
-      this.profile = profile;
-    });
-    this.profileService.getProfileInfo().subscribe(repos => {
-      console.log(repos);
-      this.repos = repos;
-    });
-  }
-  findProfile() {
+    
+    }
+  findProf() {
     this.profileService.updateProfile(this.username);
 
     this.profileService.getProfileInfo().subscribe(profile => {
       console.log(profile);
-      this.profile = profile;
+      this.prof = profile;
     });
     this.profileService.getProfileRepos().subscribe(repos => {
       console.log(repos);
-      this.repos = repos;
+      this.repositories = repos;
     });
   }
-  ngOnInit() {}
+  ngOnInit() {
+    this.profileService.updateProfile('rosa1-maker');
+    this.profileService.getProfileInfo().subscribe(profile => this.prof =profile);
+    this.profileService.getProfileRepos().subscribe(repos => this.repositories =repos );
+  }
 }
