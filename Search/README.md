@@ -4,7 +4,7 @@ This project was generated with the aim of creating a site where people can find
 
 ## links
 <ul>
-<li>To view my codes click()</li>
+<li>To view my codes click(https://github.com/rosa1-maker/-Git-search-project-)</li>
 <li>To view my site click()</li>
 </ul>
 
@@ -33,7 +33,7 @@ At the landing page you will be able to see the number of followers you have and
 
 <p>This is how one can install my project:</p>
 <ol>
-<li>Step 1 : Clone this repository using git clone , or downloading a ZIP file of the code.</li>
+<li>Step 1 : Clone this repository using git clone https://github.com/rosa1-maker/-Git-search-project-, or downloading a ZIP file of the code.</li>
 <li>Step 2 : The repository, if downloaded as a .zip file will need to be extracted to your preferred location and opened</li>
 <li>Step 3 : Open the terminal, go to the project directory and download the dependencies in the package.json using npm install</li>
 <li>Step 4 : Run ng serve on the terminal for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files</li>
