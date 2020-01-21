@@ -1,25 +1,20 @@
 <form action="" class="search-form">
   <div class="form-group">
-    <input type="text" class="form-control" placeholder="Search git users with user name" [(ngModel)]="username"
+    <input type="text" class="form-control" id="place" placeholder="Search git users with user name" [(ngModel)]="username"
       name="username" (keyup)="findProf()">
   </div>
 </form>
 <div *ngIf="prof">
-  <div class="panel-heading">
+  <div class="panel-heading" id="place">
     {{prof.name}} <small>({{prof.login}})</small>
   </div>
   <div class="panel body">
     <div class="row">
       <div class="col-sm-3">
-        <img src="{{prof.avatar_url}}" class="img-circle img-responsive" alt="profile Image">
+        <img src="{{prof.avatar_url}}"  alt="profile Image">
       </div>
       <div class="col-sm-5">
-        <ul class="list-group">
-          <li class="list-group-item" *ngIf="prof.bio">{{prof.bio}}</li>
-          <li class="list-group-item" *ngIf="prof.email"><a href="emailto:{{prof.email}}">{{prof.email}}</a>
-          </li>
-          <li class="list-group-item" *ngIf="prof.telephone">{{prof.telephone}}</li>
-        </ul>
+      
       </div>
       <div class="col-sm-4">
         <div class="people">
@@ -36,7 +31,7 @@
               <h3 class="panel-title">Repositories</h3>
             </div>
             <div class="panel-body" *ngFor='let repositories of repositories'>
-              <p>
+              <p id="repos">
                 {{repositories.name}} <a href="{{repositories.html_url}}" class="btn btn-warning" target="_blank">View this project on github</a>
               </p>
               <p>{{repositories.description}}</p>
