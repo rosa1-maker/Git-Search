@@ -5,12 +5,12 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './repositories.component.html',
   styleUrls: ['./repositories.component.css']
 })
-export class Repository {
+export class RepositoriesComponent {
   constructor(
-    public name: string,
-    public description: string,
-    public language: string,
-    public svnUrl: string
+    // public name: string,
+    // public description: string,
+    // public language: string,
+    // public svnUrl: string
   ) {}
 
   ngOnInit() {
