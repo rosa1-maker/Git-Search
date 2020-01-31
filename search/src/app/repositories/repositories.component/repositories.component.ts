@@ -7,10 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RepositoriesComponent {
   constructor(
-    // public name: string,
-    // public description: string,
-    // public language: string,
-    // public svnUrl: string
+    public name: string,
+    public description: string,
+    public svnUrl: string
   ) {}
 
   ngOnInit() {
