@@ -1,8 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RepositoryComponent } from './repositories.component';
+import { RepositoriesComponent } from './repositories.component';
 
-describe('RepositoriesComponent', () => {
+describe('Repositories.ComponentComponent', () => {
   let component: RepositoriesComponent;
   let fixture: ComponentFixture<RepositoriesComponent>;
 
