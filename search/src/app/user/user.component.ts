@@ -26,18 +26,18 @@ export class UserComponent implements OnInit {
   repos: Repository[];
   searching = false;
   searchFailed = false;
-//   constructor(
-//     private service: GhHttpService,
-//     private _service: SearchService,
-//     public avatarUrl: string,
-//     public bio: string,
-//     public followers: number,
-//     public following: number,
-//     public htmlUrl: string,
-//     public login: string,
-//     public name: string,
-//     public publicRepos: number
-//   ) {}
+  constructor(
+    private service: GhHttpService,
+    private _service: SearchService,
+    public avatarUrl: string,
+    public bio: string,
+    public followers: number,
+    public following: number,
+    public htmlUrl: string,
+    public login: string,
+    public name: string,
+    public publicRepos: number
+  ) {}
 
   ngOnInit() {}
 
