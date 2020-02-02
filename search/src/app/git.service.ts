@@ -21,17 +21,17 @@ export class GhHttpService {
     this.username = username;
   }
 
-//   userRequest() {
-//     interface ApiResponse {
-//       avatar_url: string;
-//       bio: string;
-//       followers: number;
-//       following: number;
-//       html_url: string;
-//       login: string;
-//       name: string;
-//       public_repos: number;
-//     }
+  userRequest() {
+    interface ApiResponse {
+      avatar_url: string;
+      bio: string;
+      followers: number;
+      following: number;
+      html_url: string;
+      login: string;
+      name: string;
+      public_repos: number;
+    }
 //     const promise = new Promise((resolve, reject) => {
 //       this.http
 //         .get<ApiResponse>(
