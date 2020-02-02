@@ -32,27 +32,27 @@ export class GhHttpService {
       name: string;
       public_repos: number;
     }
-//     const promise = new Promise((resolve, reject) => {
-//       this.http
-//         .get<ApiResponse>(
-//           `https://api.github.com/users/${this.username}?client_id=${environment.clientId}&client_secret=${environment.clientSecret}`
-//         )
-//         .toPromise()
-//         .then(response => {
-//           this.user.avatarUrl = response.avatar_url;
-//           this.user.bio = response.bio;
-//           this.user.followers = response.followers;
-//           this.user.following = response.following;
-//           this.user.htmlUrl = response.html_url;
-//           this.user.login = response.login;
-//           this.user.name = response.name;
-//           this.user.publicRepos = response.public_repos;
-//           resolve();
-//         })
-//         .catch(err => reject(err));
-//     });
-//     return promise;
-//   }
+    const promise = new Promise((resolve, reject) => {
+      this.http
+        .get<ApiResponse>(
+          `https://api.github.com/users/${this.username}?client_id=${environment.clientId}&client_secret=${environment.clientSecret}`
+        )
+        .toPromise()
+        .then(response => {
+          this.user.avatarUrl = response.avatar_url;
+          this.user.bio = response.bio;
+          this.user.followers = response.followers;
+          this.user.following = response.following;
+          this.user.htmlUrl = response.html_url;
+          this.user.login = response.login;
+          this.user.name = response.name;
+          this.user.publicRepos = response.public_repos;
+          resolve();
+        })
+        .catch(err => reject(err));
+    });
+    return promise;
+  }
 
 //   repoRequest() {
 //     interface RepoResponse {
