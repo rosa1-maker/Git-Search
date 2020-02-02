@@ -1,25 +1,25 @@
-// import { Injectable } from "@angular/core";
-// import { HttpClient } from "@angular/common/http";
-// import { environment } from "../../environments/environment";
-// import { User } from "src/app/models/user";
-// import { Repository } from "src/app/models/repository";
+import { Injectable } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
+import { environment } from "../../environments/environment";
+import { User } from "src/app/models/user";
+import { Repository } from "src/app/models/repository";
 
-// @Injectable({
-//   providedIn: "root"
-// })
-// export class GhHttpService {
-//   username = "Lugaga";
-//   user: User;
-//   repo: Repository;
-//   repos = [];
-//   constructor(private http: HttpClient) {
-//     this.user = new User("", "", null, null, "", "", "", null);
-//     this.repo = new Repository("", "", "", "");
-//   }
+@Injectable({
+  providedIn: "root"
+})
+export class GhHttpService {
+  username = "Teresa";
+  user: User;
+  repo: Repository;
+  repos = [];
+  constructor(private http: HttpClient) {
+    this.user = new User("", "", null, null, "", "", "", null);
+    this.repo = new Repository("", "", "", "");
+  }
 
-//   updateUser(username) {
-//     this.username = username;
-//   }
+  updateUser(username) {
+    this.username = username;
+  }
 
 //   userRequest() {
 //     interface ApiResponse {
