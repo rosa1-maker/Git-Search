@@ -54,32 +54,32 @@ export class GhHttpService {
     return promise;
   }
 
-//   repoRequest() {
-//     interface RepoResponse {
-//       name: string;
-//       description: string;
-//       svn_url: string;
-//       language: string;
-//     }
-//     const promise = new Promise((resolve, reject) => {
-//       this.http
-//         .get<RepoResponse[]>(
-//           `https://api.github.com/users/${this.username}/repos?client_id=${environment.clientId}&client_secret=${environment.clientSecret}`
-//         )
-//         .toPromise()
-//         .then(response => {
-//           for (const repos of response) {
-//             this.repo.name = repos.name;
-//             this.repo.description = repos.description;
-//             this.repo.language = repos.language;
-//             this.repo.svnUrl = repos.svn_url;
-//             this.repos.unshift(this.repo);
-//             this.repo = new Repository("", "", "", "");
-//           }
-//           resolve();
-//         })
-//         .catch(err => reject(err));
-//     });
-//     return promise;
-//   }
-// }
+  repoRequest() {
+    interface RepoResponse {
+      name: string;
+      description: string;
+      svn_url: string;
+      language: string;
+    }
+    const promise = new Promise((resolve, reject) => {
+      this.http
+        .get<RepoResponse[]>(
+          `https://api.github.com/users/${this.username}/repos?client_id=${environment.clientId}&client_secret=${environment.clientSecret}`
+        )
+        .toPromise()
+        .then(response => {
+          for (const repos of response) {
+            this.repo.name = repos.name;
+            this.repo.description = repos.description;
+            this.repo.language = repos.language;
+            this.repo.svnUrl = repos.svn_url;
+            this.repos.unshift(this.repo);
+            this.repo = new Repository("", "", "", "");
+          }
+          resolve();
+        })
+        .catch(err => reject(err));
+    });
+    return promise;
+  }
+}
