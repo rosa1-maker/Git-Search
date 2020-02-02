@@ -41,18 +41,18 @@ export class UserComponent implements OnInit {
 
   ngOnInit() {}
 
-//   getUser({ value }) {
-//     this.service.username = value.search;
-//     this.service
-//       .userRequest()
-//       .then(() => (this.user = this.service.user))
-//       .catch(err => console.log(err));
-//     this.service
-//       .repoRequest()
-//       .then(() => (this.repos = this.service.repos))
-//       .catch(err => console.log(err));
-//     this.form.reset();
-//   }
+  getUser({ value }) {
+    this.service.username = value.search;
+    this.service
+      .userRequest()
+      .then(() => (this.user = this.service.user))
+      .catch(err => console.log(err));
+    this.service
+      .repoRequest()
+      .then(() => (this.repos = this.service.repos))
+      .catch(err => console.log(err));
+    this.form.reset();
+  }
 
 //   search = (text$: Observable<string>) =>
 //     text$.pipe(

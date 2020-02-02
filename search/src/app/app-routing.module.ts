@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { UserProfileComponent } from '../user.component';
+import { UserComponent } from '.user/user.c';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 
 const routes: Routes = [
-  { path: '', component: UserProfileComponent },
+  { path: '', component: UserComponent },
   { path: '**', component: NotFoundComponent }
 ];
 
