@@ -1,27 +1,48 @@
-<!-- # Search
+## LOCKER
+## Description
+Locker is a terminal run python application that allows users to store details i.e. usernames and passwords of their various accounts.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.23.
+## Technologies used
+python3.6
 
-## Development server
+## Installation
+This is how one can install my project:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Step 1 : Clone this repository using git clone https://github.com/rosa1-maker/Locker, or downloading a ZIP file of the code.
+Step 2 : The repository, if downloaded as a .zip file will need to be extracted to your preferred location and opened
+Step 3 : Open the terminal, go to the project directory and download the dependencies in the package.json using npm install
+Step 4 : Run working.py in terminal\
 
-## Code scaffolding
+## Behaviour Driven Development
+Behaviour | Input | Output |
+| :---------------- | :---------------: | ------------------: |
+| Display codes for navigation | **In terminal: $./list.py** | Hi there, Welcome to the Password vault, What do we call you? |
+| Display prompt for creating an account | **Enter: Ac** | Enter your first name, last name, password and email address |
+| Display prompt for login in | **Enter: log** | Enter your account details to log in |
+| Display codes for navigation | **Successful login** | Choose an option: cr - Create Credential, dis - Display Credentials, cp - Copy Credential, go - exit |
+| Display prompt for creating a credential | **Enter: cr** | Enter the site name, credentials, password and email address |
+| Display a list of credentials | **Enter: dis** | Prints a list of saved credentials |
+| Display prompt for which credential to copy | **Enter: cp** | Enter the site name of the credential you wish to copy. |
+| Exit application | **Enter: go** | Exit the current navigation stage |
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Test Driven Development
+To test the app, run this commands in the terminal;
 
-## Build
+$ python3.6 user_test.py
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+$ python3.6 credential_test.py
 
-## Running unit tests
+## License
+The MIT License (MIT) Copyright (c) 2019 Teresa Wanjiku.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-## Running end-to-end tests
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-## Further help
+@rosa1-maker
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md). -->
+Author
+
+Designed by Teresa Wanjiku
