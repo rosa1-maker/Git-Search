@@ -1,8 +1,8 @@
-// import { UpperPipe } from './upper.pipe';
+import { UpperPipe } from './upper.pipe';
 
-// describe('UpperPipe', () => {
-//   it('create an instance', () => {
-//     const pipe = new UpperPipe();
-//     expect(pipe).toBeTruthy();
-//   });
-// });
+describe('UpperPipe', () => {
+  it('create an instance', () => {
+    const pipe = new UpperPipe();
+    expect(pipe).toBeTruthy();
+  });["mary", "Teresa", "Martha", "Jane", "Lucy"]
+});
