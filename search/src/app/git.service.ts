@@ -1,8 +1,8 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
-import { environment } from "../../environments/environment";
-import { User } from "src/app/models/user";
-import { Repository } from "src/app/models/repository";
+import { environment } from "src/environments/environment";
+import { User } from "src/app/User";
+import { Repository } from "src/app/repository";
 
 @Injectable({
   providedIn: "root"
@@ -13,8 +13,8 @@ export class GhHttpService {
   repo: Repository;
   repos = [];
   constructor(private http: HttpClient) {
-    this.user = new User("", "", null, null, "", "", "", null);
-    this.repo = new Repository("", "", "", "");
+    this.user = new User("");
+    this.repo = new Repository("");
   }
 
   updateUser(username) {
@@ -35,7 +35,7 @@ export class GhHttpService {
     const promise = new Promise((resolve, reject) => {
       this.http
         .get<ApiResponse>(
-          `https://api.github.com/users/${this.username}?client_id=${environment.clientId}&client_secret=${environment.clientSecret}`
+          `https://api.github.com/users/${this.username}?client_token=${environment.client_token}`
         )
         .toPromise()
         .then(response => {
@@ -64,7 +64,7 @@ export class GhHttpService {
     const promise = new Promise((resolve, reject) => {
       this.http
         .get<RepoResponse[]>(
-          `https://api.github.com/users/${this.username}/repos?client_id=${environment.clientId}&client_secret=${environment.clientSecret}`
+          `https://api.github.com/users/${this.username}/repos?client_token=${environment.client_token}`
         )
         .toPromise()
         .then(response => {
@@ -74,7 +74,7 @@ export class GhHttpService {
             this.repo.language = repos.language;
             this.repo.svnUrl = repos.svn_url;
             this.repos.unshift(this.repo);
-            this.repo = new Repository("", "", "", "");
+            this.repo = new Repository("");
           }
           resolve();
         })
