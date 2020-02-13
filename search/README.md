@@ -1,38 +1,31 @@
-## LOCKER
-## Description
-Locker is a terminal run python application that allows users to store details i.e. usernames and passwords of their various accounts.
+Git-Search
+Descrfiption
+This project was generated with the aim of creating a site where people can find their repositories and git hub pages.
 
-## Technologies used
-python3.6
+links
+To view my codes click(https://github.com/rosa1-maker/-Git-search-project-)
+To view my site click(https://rosa1-maker.github.io/Git-Search/)
+Behaviour Driven Development
+Displays GitHub info of a user when user name is entered . INPUT: "user name entered" . OUTPUT: "Displays User Details"
 
-## Installation
+After searching the Github account you get to see the github profile and the you can explore more to see the github account.
+
+At the landing page you will be able to see the number of followers you have and the people you are following.
+
+Technologies used
+Angular CLI version 8.0.3.
+HTML
+CSS
+Javascript
+Bootstrap 4.3.1
+Installation
 This is how one can install my project:
 
-Step 1 : Clone this repository using git clone https://github.com/rosa1-maker/Locker, or downloading a ZIP file of the code.
+Step 1 : Clone this repository using git clone https://github.com/rosa1-maker/-Git-search-project-, or downloading a ZIP file of the code.
 Step 2 : The repository, if downloaded as a .zip file will need to be extracted to your preferred location and opened
 Step 3 : Open the terminal, go to the project directory and download the dependencies in the package.json using npm install
-Step 4 : Run working.py in terminal\
-
-## Behaviour Driven Development
-Behaviour | Input | Output |
-| :---------------- | :---------------: | ------------------: |
-| Display codes for navigation | **In terminal: $./list.py** | Hi there, Welcome to the Password vault, What do we call you? |
-| Display prompt for creating an account | **Enter: Ac** | Enter your first name, last name, password and email address |
-| Display prompt for login in | **Enter: log** | Enter your account details to log in |
-| Display codes for navigation | **Successful login** | Choose an option: cr - Create Credential, dis - Display Credentials, cp - Copy Credential, go - exit |
-| Display prompt for creating a credential | **Enter: cr** | Enter the site name, credentials, password and email address |
-| Display a list of credentials | **Enter: dis** | Prints a list of saved credentials |
-| Display prompt for which credential to copy | **Enter: cp** | Enter the site name of the credential you wish to copy. |
-| Exit application | **Enter: go** | Exit the current navigation stage |
-
-## Test Driven Development
-To test the app, run this commands in the terminal;
-
-$ python3.6 user_test.py
-
-$ python3.6 credential_test.py
-
-## License
+Step 4 : Run ng serve on the terminal for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files
+License
 The MIT License (MIT) Copyright (c) 2019 Teresa Wanjiku.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
