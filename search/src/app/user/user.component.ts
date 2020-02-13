@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
-import { GhHttpService } from "src/app/services/gh-http.service";
-import { Observable, of } from "rxjs";
+import { GhHttpService } from "src/app/git.service";
+import { Observable, of, from } from "rxjs";
 import {
   catchError,
   debounceTime,
@@ -8,27 +8,25 @@ import {
   tap,
   switchMap
 } from "rxjs/operators";
-import { User } from "src/app/models/user";
-import { Repository } from "src/app/models/repository";
-import { SearchService } from "src/app/services/search.service";
-
+import {User} from "src/app/User"
+import {SearchingService} from "src/app/searching.service"
+import {Repository } from "src/app/repository"
 @Component({
   selector: "app-user-profile",
   templateUrl: "./user-profile.component.html",
-  providers: [GhHttpService, SearchService],
+  providers: [GhHttpService, SearchingService],
   styleUrls: ["./user-profile.component.css"]
 })
 export class UserComponent implements OnInit {
-  @ViewChild("userForm")
   form: any;
   model: string;
   user: User;
-  repos: Repository[];
+  repositori: Repository[];
   searching = false;
   searchFailed = false;
   constructor(
     private service: GhHttpService,
-    private _service: SearchService,
+    private _service: SearchingService,
     public avatarUrl: string,
     public bio: string,
     public followers: number,
@@ -49,25 +47,25 @@ export class UserComponent implements OnInit {
       .catch(err => console.log(err));
     this.service
       .repoRequest()
-      .then(() => (this.repos = this.service.repos))
+      .then(() => (this.repositori = this.service.repos))
       .catch(err => console.log(err));
     this.form.reset();
   }
 
-//   search = (text$: Observable<string>) =>
-//     text$.pipe(
-//       debounceTime(300),
-//       distinctUntilChanged(),
-//       tap(() => (this.searching = true)),
-//       switchMap(term =>
-//         this._service.search(term).pipe(
-//           tap(() => (this.searchFailed = false)),
-//           catchError(() => {
-//             this.searchFailed = true;
-//             return of([]);
-//           })
-//         )
-//       ),
-//       tap(() => (this.searching = false))
-//     );
-// // }
+  search = (text$: Observable<string>) =>
+    text$.pipe(
+      debounceTime(300),
+      distinctUntilChanged(),
+      tap(() => (this.searching = true)),
+      switchMap(term =>
+        this._service.search(term).pipe(
+          tap(() => (this.searchFailed = false)),
+          catchError(() => {
+            this.searchFailed = true;
+            return of([]);
+          })
+        )
+      ),
+      tap(() => (this.searching = false))
+    );
+}
