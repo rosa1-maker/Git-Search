@@ -4,10 +4,10 @@ import { of } from "rxjs";
 import { map } from "rxjs/operators";
 import { environment } from "../environments/environment";
 
-const ghUrl = "https://api.github.com/search/users?client_token=${environment.apiKey='d5a6f91f993d023ae3b458ae267e733793d3764e}'";
-const PARAMS = new HttpParams({
+const ghUrl = "https://api.github.com/search/users?client_token='d5a6f91f993d023ae3b458ae267e733793d3764e}'";
+const parameteres = new HttpParams({
   fromObject: {
-    client_token: environment.apiKey,
+    client_token:'d5a6f91f993d023ae3b458ae267e733793d3764e'
   }
 });
 
@@ -22,7 +22,7 @@ export class SearchingService {
     }
 
     return this.http
-      .get(ghUrl, { params: PARAMS.set("q", `${term}+in:login`) })
+      .get(ghUrl, { params: parameteres.set("q", `${term}+in:login`) })
       .pipe(
         map(response => {
           this.strArr = [];

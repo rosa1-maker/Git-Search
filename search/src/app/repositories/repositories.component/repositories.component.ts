@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { GhHttpService } from "src/app/git.service"
 
 @Component({
   selector: 'app-repositories',

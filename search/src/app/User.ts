@@ -7,5 +7,5 @@ export class User {
   login: string;
   name: string;
   publicRepos: number;
-    constructor(private username:string,){  }
+    constructor(){  }
 }

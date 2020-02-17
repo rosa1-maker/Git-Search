@@ -1,6 +1,5 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
-import { environment } from "src/environments/environment";
 import { User } from "src/app/User";
 import { Repository } from "src/app/repository";
 
@@ -13,11 +12,11 @@ export class GhHttpService {
   repo: Repository;
   repos = [];
   constructor(private http: HttpClient) {
-    this.user = new User("");
-    this.repo = new Repository("");
+    this.user = new User();
+    this.repo = new Repository();
   }
 
-  updateUser(username) {
+  updateUser(username: string) {
     this.username = username;
   }
 
@@ -35,7 +34,7 @@ export class GhHttpService {
     const promise = new Promise((resolve, reject) => {
       this.http
         .get<ApiResponse>(
-          `https://api.github.com/users/${this.username}?client_token=${environment.client_token}`
+          `https://api.github.com/users/${this.username}?client_token= 'd5a6f91f993d023ae3b458ae267e733793d3764e'}`
         )
         .toPromise()
         .then(response => {
@@ -64,7 +63,7 @@ export class GhHttpService {
     const promise = new Promise((resolve, reject) => {
       this.http
         .get<RepoResponse[]>(
-          `https://api.github.com/users/${this.username}/repos?client_token=${environment.client_token}`
+          `https://api.github.com/users/${this.username}/repos?client_token='d5a6f91f993d023ae3b458ae267e733793d3764e'}`
         )
         .toPromise()
         .then(response => {
@@ -74,7 +73,7 @@ export class GhHttpService {
             this.repo.language = repos.language;
             this.repo.svnUrl = repos.svn_url;
             this.repos.unshift(this.repo);
-            this.repo = new Repository("");
+            this.repo = new Repository();
           }
           resolve();
         })

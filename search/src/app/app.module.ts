@@ -5,20 +5,16 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { UserProfileComponent } from './user.component';
+import { UserComponent } from 'src/app/user/user.component';
 import { HttpClientModule } from '@angular/common/http';
-import { NotFoundComponent } from './components/not-found/not-found.component';
-import { UppercasePipe } from './pipes/uppercase.pipe';
-import { HighlightDirective } from './directives/highlight.directive';
+import { UpperPipe } from 'src/app/upper.pipe';
+import { HighlightDirective } from 'src/app/highlight.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
-    UserProfileComponent,
-    NotFoundComponent,
-    UppercasePipe,
+    UserComponent,
+    UpperPipe,
     HighlightDirective
   ],
   imports: [

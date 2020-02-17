@@ -3,5 +3,5 @@ export class Repository {
   description: string;
   language: string;
   svnUrl: string;
-    constructor(private access_token:string,){}
+    constructor(){}
 }

@@ -1,11 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { UserComponent } from '.user/user.c';
-import { NotFoundComponent } from './components/not-found/not-found.component';
+import { UserComponent } from './user/user.component';
 
 const routes: Routes = [
-  { path: '', component: UserComponent },
-  { path: '**', component: NotFoundComponent }
+  { path: '', component: UserComponent }
 ];
 
 @NgModule({

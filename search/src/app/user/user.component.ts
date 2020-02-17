@@ -1,6 +1,6 @@
-import { Component, OnInit, ViewChild } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { GhHttpService } from "src/app/git.service";
-import { Observable, of, from } from "rxjs";
+import { Observable, of } from "rxjs";
 import {
   catchError,
   debounceTime,
@@ -12,18 +12,19 @@ import {User} from "src/app/User"
 import {SearchingService} from "src/app/searching.service"
 import {Repository } from "src/app/repository"
 @Component({
-  selector: "app-user-profile",
-  templateUrl: "./user-profile.component.html",
+  selector: 'app-user-profile',
+  templateUrl: './user.component.html',
   providers: [GhHttpService, SearchingService],
-  styleUrls: ["./user-profile.component.css"]
+  styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
   form: any;
-  model: string;
-  user: User;
-  repositori: Repository[];
+  model:string;
+  user:User;
+  repository: Repository[];
   searching = false;
   searchFailed = false;
+
   constructor(
     private service: GhHttpService,
     private _service: SearchingService,
@@ -47,7 +48,7 @@ export class UserComponent implements OnInit {
       .catch(err => console.log(err));
     this.service
       .repoRequest()
-      .then(() => (this.repositori = this.service.repos))
+      .then(() => (this.repository = this.service.repos))
       .catch(err => console.log(err));
     this.form.reset();
   }
